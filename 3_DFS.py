@@ -28,18 +28,3 @@ def dfs(graph, start):
     return visited
 
 dfs(graph,'A')
-
-def bfs(graph, start):
-    visited = []
-    queue = [start]
-
-    while queue:
-        n = queue.pop(0)
-        if n not in visited:
-            visited.append(n)
-            queue += graph[n] - set(visited)
-            print("queue=",queue)
-            print("visited=",visited)
-    return visited
-
-bfs(graph,'A')
